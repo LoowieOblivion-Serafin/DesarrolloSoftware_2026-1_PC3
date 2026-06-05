@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es" class="theme-light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voz del Ciudadano — Plataforma del Estado Peruano</title>
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-size-medium">
+
+  <!-- Barra Oficial del Estado Peruano -->
+  <div class="gob-pe-topbar">
+    <div class="topbar-container">
+      <div class="topbar-left">
+        <span class="peru-flag-mini">🇵🇪</span>
+        <span class="topbar-text">Plataforma Digital Única del Estado Peruano</span>
+      </div>
+      <div class="topbar-right">
+        <!-- Idiomas -->
+        <div class="lang-selector">
+          <button class="lang-btn active">Español</button>
+          <button class="lang-btn">Quechua</button>
+          <button class="lang-btn">English</button>
+        </div>
+        <!-- Controles de Accesibilidad WCAG 2.2 -->
+        <div class="accessibility-controls">
+          <span class="acc-label">Accesibilidad:</span>
+          <button class="acc-btn" id="acc-font-minus" title="Disminuir tamaño de letra" aria-label="Disminuir tamaño de letra">A-</button>
+          <button class="acc-btn" id="acc-font-reset" title="Restablecer tamaño de letra" aria-label="Restablecer tamaño de letra">A</button>
+          <button class="acc-btn" id="acc-font-plus" title="Aumentar tamaño de letra" aria-label="Aumentar tamaño de letra">A+</button>
+          <button class="acc-btn" id="acc-contrast-toggle" title="Alternar Alto Contraste" aria-label="Alternar Alto Contraste">🌓</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Encabezado Institucional -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <div class="national-shield">🇵🇪</div>
+        <div class="shield-text">
+          <h1>Voz del Ciudadano</h1>
+          <p class="subtitle">Oficina del Congreso de la República y Sociedad Civil</p>
+        </div>
+      </div>
+      
+      <!-- Menú de Navegación Ejecutivo -->
+      <nav class="nav-menu">
+        <a href="#" class="nav-link active">Inicio</a>
+        <a href="#" class="nav-link">Trámites y Servicios</a>
+        <a href="#" class="nav-link">Consulta de Expedientes</a>
+        <a href="#" class="nav-link">Transparencia Abierta</a>
+        <a href="#" class="nav-link">Mesa de Partes Virtual</a>
+      </nav>
+
+      <div class="header-badge">
+        <span class="pulse-indicator"></span>
+        <span class="badge-text">Canal Oficial</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-container">
+    
+    <!-- Hero / Buscador Principal -->
+    <section class="hero-section">
+      <div class="hero-text-area">
+        <span class="hero-tag">Iniciativas Ciudadanas</span>
+        <h2>Proponga iniciativas de ley y sume su firma digital</h2>
+        <p>Plataforma para que colectivos de la sociedad civil presenten propuestas normativas al amparo constitucional. Soportado por validación oficial RENIEC e inmutabilidad criptográfica.</p>
+      </div>
+      
+      <!-- Buscador Inteligente -->
+      <div class="search-container">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" placeholder="Buscar iniciativas legislativas por título, código o colectivo..." aria-label="Buscar iniciativas legislativas">
+          <button class="btn btn-primary" id="btn-search">Buscar</button>
+        </div>
+      </div>
+
+      <!-- Indicadores Rápidos de Gestión -->
+      <div class="indicators-grid">
+        <div class="ind-card">
+          <span class="ind-num">25,000</span>
+          <span class="ind-label">Firmas Requeridas</span>
+        </div>
+        <div class="ind-card">
+          <span class="ind-num">90 días</span>
+          <span class="ind-label">Plazo de Recolección</span>
+        </div>
+        <div class="ind-card">
+          <span class="ind-num">RENIEC</span>
+          <span class="ind-label">Firma Identidad Digital</span>
+        </div>
+        <div class="ind-card">
+          <span class="ind-num">SHA-256</span>
+          <span class="ind-label">Seguridad Criptográfica</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Propuesta Activa (Hero Proposal Details) -->
+    <section class="proposal-details-card card">
+      <div class="proposal-card-layout">
+        <div class="proposal-main-content">
+          <div class="proposal-meta-top">
+            <span class="proposal-id-tag" id="proposal-id">ILC-XXXX</span>
+            <div class="status-badge" id="state-badge">Cargando</div>
+          </div>
+          <h3 id="proposal-title">Cargando título de la iniciativa...</h3>
+          <p id="proposal-body" class="proposal-text-body">Cargando descripción completa...</p>
+          
+          <div class="collective-details-box">
+            <strong>Organización Civil Proponente:</strong>
+            <span id="collective-name">Cargando Colectivo...</span> | 
+            Representante: <span id="collective-rep">Cargando Rep...</span> | 
+            Contacto: <span id="collective-email">Cargando Email...</span>
+          </div>
+        </div>
+
+        <div class="proposal-aside-stats">
+          <div class="aside-stat-box">
+            <span class="aside-stat-label">Días Restantes</span>
+            <div class="aside-stat-value" id="days-remaining">--</div>
+            <span class="aside-stat-sub">Plazo máximo: 90 días</span>
+          </div>
+          <button class="btn btn-primary btn-block btn-glow" id="btn-activate" style="display: none;">Activar Campaña de Firmas</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cuerpo Principal: Grid de Dos Columnas -->
+    <div class="grid-layout">
+      
+      <!-- Columna Izquierda: Composite Recursos -->
+      <section class="card">
+        <div class="card-header">
+          <h3>📂 Expediente Técnico y Soporte</h3>
+          <span class="badge-tech">Patrón Composite</span>
+        </div>
+        <p class="card-desc">Recursos jerárquicos y documentos adjuntos por el colectivo que sustentan legalmente la propuesta técnica.</p>
+        
+        <div class="composite-box">
+          <div class="resource-tree-visual" id="resource-tree">
+            <!-- Renderizado dinámico del composite -->
+          </div>
+          
+          <div class="composite-metadata-panel">
+            <div class="meta-item">
+              <span>Tamaño del Expediente:</span>
+              <strong id="total-size">0 KB</strong>
+            </div>
+            <div class="meta-item">
+              <span>Archivos indexados:</span>
+              <strong id="total-files">0</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario para agregar archivos al Composite -->
+        <div class="sub-form-area">
+          <h4>Adjuntar Nuevo Documento Técnico</h4>
+          <form id="add-resource-form">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="resource-type">Tipo de Recurso</label>
+                <select id="resource-type">
+                  <option value="DOCUMENT">📄 Exposición de Motivos (PDF)</option>
+                  <option value="VIDEO">🎥 Video Explicativo (MP4)</option>
+                  <option value="LINK">🔗 Enlace Web de Interés</option>
+                  <option value="FOLDER">📁 Subcarpeta de Trabajo</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="resource-name">Nombre del Archivo</label>
+                <input type="text" id="resource-name" placeholder="ej. sustentacion-presupuesto.pdf" required>
+              </div>
+            </div>
+            
+            <div class="form-grid-2" id="resource-details-row">
+              <div class="form-group" id="size-group">
+                <label for="resource-size">Tamaño en Bytes</label>
+                <input type="number" id="resource-size" value="1024" min="0">
+              </div>
+              <div class="form-group" id="uri-group" style="display: none;">
+                <label for="resource-uri">Enlace URL</label>
+                <input type="url" id="resource-uri" value="https://">
+              </div>
+              <div class="form-group">
+                <label for="resource-parent">Carpeta Destino</label>
+                <select id="resource-parent">
+                  <option value="Expediente-ILC-2026-001">Carpeta Principal (Raíz)</option>
+                  <option value="documentos">documentos/</option>
+                  <option value="multimedia">multimedia/</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-secondary">Adjuntar Documento</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Columna Derecha: Firmas y Comentarios -->
+      <div class="flex-stack">
+        
+        <!-- Tarjeta de Firmas (Proxy + Chain + Strategy) -->
+        <section class="card">
+          <div class="card-header">
+            <h3>✍️ Respaldo Ciudadano (Firmas Digitales)</h3>
+            <span class="badge-tech">Proxy + Chain + Strategy</span>
+          </div>
+          
+          <div class="progress-section">
+            <div class="progress-bar-bg">
+              <div class="progress-bar-active" id="progress-bar-fill" style="width: 0%"></div>
+            </div>
+            <div class="progress-text-display">
+              <span class="large-number" id="signatures-count">0</span>
+              <span class="target-text">firmas digitales de 25,000 requeridas</span>
+            </div>
+          </div>
+
+          <!-- Simulator -->
+          <div class="simulator-box">
+            <h4>Simulador de Firma Digital</h4>
+            <p class="simulator-desc">Valida el DNI con la base de datos de RENIEC, filtra duplicados y listas negras a través del proxy del sistema.</p>
+
+            <div id="sig-error-alert" class="alert alert-error" style="display: none;"></div>
+            <div id="sig-success-alert" class="alert alert-success" style="display: none;"></div>
+
+            <form id="sign-form">
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="citizen-dni">Número de DNI del Ciudadano</label>
+                  <input type="text" id="citizen-dni" maxlength="8" pattern="[0-9]{8}" placeholder="Ingrese 8 dígitos" required>
+                </div>
+                <div class="form-group">
+                  <label for="sign-method">Método de Validación</label>
+                  <select id="sign-method">
+                    <option value="DNI_RENIEC">Estrategia RENIEC (Verificación simple)</option>
+                    <option value="DIGITAL_CERTIFICATE">Certificado Digital (Firma Electrónica)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="actions-row">
+                <button type="submit" class="btn btn-primary" id="btn-submit-sign">Firmar Iniciativa</button>
+                <button type="button" class="btn btn-danger" id="btn-bulk-sign">Inyectar 25k Firmas (Demo)</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <!-- Tarjeta de Comentarios / Sugerencias (State) -->
+        <section class="card">
+          <div class="card-header">
+            <h3>💬 Aportes y Sugerencias de Modificación</h3>
+            <span class="badge-tech">Patrón State</span>
+          </div>
+          <p class="card-desc">Los ciudadanos pueden debatir, opinar y proponer cambios normativos (RF-4) mientras el expediente esté activo.</p>
+          
+          <div class="comments-scroll-area" id="comments-list">
+            <!-- Comentarios dinámicos -->
+          </div>
+
+          <div class="comment-input-area">
+            <form id="comment-form">
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="comment-dni">DNI del Autor</label>
+                  <input type="text" id="comment-dni" maxlength="8" placeholder="DNI del autor" required>
+                </div>
+                <div class="form-group">
+                  <label for="comment-kind">Clase de Aporte</label>
+                  <select id="comment-kind">
+                    <option value="OPINION">Opinión general o apoyo</option>
+                    <option value="MODIFICATION_SUGGESTION">Sugerencia de Cambio Articulado</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="comment-text">Mensaje</label>
+                <textarea id="comment-text" rows="2" placeholder="Escriba su aporte técnico o sugerencia..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-secondary">Publicar Comentario</button>
+            </form>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Panel de Seguridad, Congelamiento y Distribución al Congreso -->
+    <section class="card crypto-distribution-card">
+      <div class="card-header">
+        <h3>🔒 Seguridad Institucional y Distribución al Congreso</h3>
+        <span class="badge-tech">Facade + Adapter</span>
+      </div>
+      
+      <div class="crypto-flex-layout">
+        <!-- Hash y Criptografía -->
+        <div class="crypto-info-panel">
+          <div class="crypto-meta-field">
+            <span class="field-lbl">Huella Criptográfica del Expediente (SHA-256):</span>
+            <code class="code-hash-display" id="frozen-hash">No congelado. Al alcanzar 25k firmas, el sistema se cierra automáticamente.</code>
+          </div>
+          <div class="crypto-meta-field">
+            <span class="field-lbl">Firma Digital del Servidor (HMAC):</span>
+            <code class="code-hash-display" id="frozen-signature">No generado</code>
+          </div>
+          
+          <!-- Botón de verificación de integridad -->
+          <div class="integrity-verification-box" id="integrity-check-panel" style="display: none;">
+            <button class="btn btn-secondary" id="btn-verify-integrity">Verificar Integridad del Expediente</button>
+            <span class="integrity-status-txt" id="integrity-result"></span>
+          </div>
+        </div>
+
+        <!-- Distribución y Recibo -->
+        <div class="congress-send-panel">
+          <div class="send-meta">
+            <span>Distribución de Mesa de Partes (Congreso):</span>
+            <strong id="congress-receipt-status">Esperando firmas</strong>
+          </div>
+          
+          <button class="btn btn-primary btn-glow" id="btn-distribute" style="display: none;">Enviar a Comisión Legislativa</button>
+          
+          <div class="congress-receipt-box" id="receipt-box" style="display: none;">
+            <span class="receipt-label">Recibo Oficial de Distribución</span>
+            <div class="receipt-code-value" id="receipt-id">CONG-XXXX-XXXX</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transparencia Abierta: Logs de Auditoría y Notificaciones de Observers -->
+    <section class="card tabbed-logs-card">
+      <div class="tabs-header-row">
+        <button class="tab-button active" id="tab-btn-audit">🛡️ Consola de Auditoría Gubernamental (Decorator)</button>
+        <button class="tab-button" id="tab-btn-observers">🔔 Alertas e Hilos del Sistema (Observer)</button>
+      </div>
+
+      <!-- Tab Audit logs -->
+      <div class="tab-content-panel" id="tab-content-audit">
+        <p class="tab-description-text">Registros de control de firmas procesadas por el decorador de auditoría. Permite fiscalizar DNI, método de verificación y resultado.</p>
+        <div class="table-scroll-container">
+          <table class="audit-table">
+            <thead>
+              <tr>
+                <th>Hora</th>
+                <th>DNI Consultante</th>
+                <th>Método de Validación</th>
+                <th>Resultado de Control</th>
+                <th>Detalle / Excepción</th>
+              </tr>
+            </thead>
+            <tbody id="audit-log-body">
+              <!-- Logs dinámicos -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab Observers -->
+      <div class="tab-content-panel" id="tab-content-observers" style="display: none;">
+        <p class="tab-description-text">Alertas en tiempo real distribuidas a los diferentes agentes observadores suscritos a la propuesta legislativa.</p>
+        <div class="observers-flex-container">
+          <div class="observer-panel">
+            <h5>Notificador del Colectivo</h5>
+            <ul class="observer-feed" id="obs-list-collective">
+              <!-- Eventos colectivo -->
+            </ul>
+          </div>
+          <div class="observer-panel">
+            <h5>Notificador del Congreso</h5>
+            <ul class="observer-feed" id="obs-list-congress">
+              <!-- Eventos congreso -->
+            </ul>
+          </div>
+          <div class="observer-panel">
+            <h5>Notificador Ciudadano</h5>
+            <ul class="observer-feed" id="obs-list-citizens">
+              <!-- Eventos ciudadanos -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de Página Institucional -->
+  <footer class="gob-footer">
+    <div class="footer-container">
+      <p>&copy; 2026 Voz del Ciudadano — Congreso de la República. Todos los derechos reservados.</p>
+      <p class="footer-subtext">Plataforma digital construida bajo estándares de la Secretaría de Gobierno y Transformación Digital de la Presidencia del Consejo de Ministros (PCM).</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
